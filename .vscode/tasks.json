@@ -4,77 +4,38 @@
         {
             "label": "build",
             "type": "shell",
-            "isBackground": false,
-            "promptOnClose": true,
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "command": "powershell",
-            "args": [
-                "-c",
-                "mingw32-make"
-            ],
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "dedicated",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-c",
+                    "make"
+                ]
+            }
         },
         {
             "label": "build & run",
             "type": "shell",
-            "isBackground": false,
-            "promptOnClose": true,
-            "command": "powershell",
-            "args": [
-                "-c",
-                "'mingw32-make run'"
-            ],
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "dedicated",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-c",
+                    "'make run'"
+                ]
+            }
         },
         {
             "label": "clean",
             "type": "shell",
-            "isBackground": false,
-            "promptOnClose": true,
-            "command": "powershell",
-            "args": [
-                "-c",
-                "'mingw32-make clean'"
-            ],
-            "presentation": {
-                "echo": true,
-                "reveal": "never",
-                "focus": false,
-                "panel": "dedicated",
-                "showReuseMessage": false,
-                "clear": true
-            },
-            "options": {
-                "cwd": "${workspaceFolder}"
+            "windows": {
+                "command": "powershell",
+                "args": [
+                    "-c",
+                    "'make clean'"
+                ]
             }
         }
     ]
