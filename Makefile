@@ -1,7 +1,6 @@
-CC		:= clang++
+CC		:= clang++.bat
 CFLAGS	:= -std=c++17 -ggdb -Wno-invalid-source-encoding
 CFLAGS	+= -Wall -Wextra
-CFLAGS	+= --target=x86_64-w64-windows-gnu
 
 BIN		:= bin
 SRC		:= src
@@ -9,6 +8,7 @@ INCLUDE	:= include
 LIB		:= lib
 
 LIBRARIES	:= -lglfw3dll
+LIBRARIES	+= -lglad
 
 EXECUTABLE	:= main.exe
 SOURCEDIRS	:= $(SRC)

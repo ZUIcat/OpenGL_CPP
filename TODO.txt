@@ -1,0 +1,6 @@
+%MSYS2%
+mypath .exe
+gdb.bat
+clang.bat
+cmake
+--target=x86_64-w64-windows-gnu
