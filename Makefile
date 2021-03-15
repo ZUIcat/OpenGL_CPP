@@ -1,4 +1,4 @@
-CC		:= clang++.bat
+CC		:= clang++
 CFLAGS	:= -std=c++17 -ggdb -Wno-invalid-source-encoding
 CFLAGS	+= -Wall -Wextra
 
