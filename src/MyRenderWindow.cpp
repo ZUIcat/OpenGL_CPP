@@ -1,10 +1,13 @@
 #include "MyRenderWindow.h"
+#include "TextureUtil.h"
 
 MyRenderWindow::~MyRenderWindow() {}
 
 void MyRenderWindow::OnWindowCreated() {
     glfwSetFramebufferSizeCallback(glfwWindow, FramebufferSizeCallback);
-    rectangle = new Rectangle();
+    glEnable(GL_CULL_FACE);
+    TextureUtil::AddTexture("tex003", "./res/tex003.png");
+    rectangle = new Rectangle(TextureUtil::GetTexture("tex003"));
 }
 
 void MyRenderWindow::OnDrawFrame() {

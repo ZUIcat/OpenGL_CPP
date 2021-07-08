@@ -7,9 +7,9 @@
 
 class RenderWindow {
   protected:
-    char *title;
-    int width;
-    int height;
+    const char *title;
+    const int width;
+    const int height;
     GLFWwindow *glfwWindow;
 
     virtual void OnWindowCreated() = 0;
@@ -17,7 +17,7 @@ class RenderWindow {
     virtual void OnWindowDestroy() = 0;
 
   public:
-    RenderWindow(char *title, unsigned int width, unsigned int height);
+    RenderWindow(const char *title, unsigned int width, unsigned int height);
     virtual ~RenderWindow();
 
     virtual GLFWwindow *InitWindow();

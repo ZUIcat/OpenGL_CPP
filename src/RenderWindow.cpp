@@ -1,6 +1,6 @@
 #include "RenderWindow.h"
 
-RenderWindow::RenderWindow(char *title, unsigned int width, unsigned int height)
+RenderWindow::RenderWindow(const char *title, unsigned int width, unsigned int height)
     : title(title), width(width), height(height) {
 }
 
@@ -47,4 +47,5 @@ void RenderWindow::StartDraw() {
         glfwPollEvents(); // TODO
     }
     OnWindowDestroy(); // TODO 缺个手动点击关闭按钮的回调方法
+    // TODO OnWindowDestroy 放在析构函数里?
 }
